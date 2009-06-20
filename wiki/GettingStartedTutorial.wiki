@@ -62,6 +62,10 @@ try {
 
 }}}
 
+
+------
+
+
 ===Non-Unicode message==
 
 {{{
@@ -100,6 +104,10 @@ try {
 }}}
 
 
+------
+
+
+
 ==Check your balance==
 
 Sometimes it is required to know beforehand whether you can send messages or can not. For example, if you don't have enough credits on your balance, you can assume that your sending requests would fail.
@@ -121,6 +129,10 @@ try {
     //your code
 }
 }}}
+
+
+
+------
 
 
 ==Check sent message delivery status==
@@ -166,6 +178,11 @@ try {
 
 }}}
 
+
+------
+
+
+
 ==Retrieving incoming sms messages==
 
 Once you start using TextMagic for sending messages, you may realize that in some cases you need feedback from your recipients. TextMagic allows your recipients to reply to the messages they get. And even to send messages to your <a href="http://api.textmagic.com/https-api/sender-id">sender id</a>. This inbound messages are stored on TextMagic server and can be accessed in your account administration page or with help of PHP api. 
@@ -202,6 +219,8 @@ try {
 
 }}}
 
+
+------
 
 
 
