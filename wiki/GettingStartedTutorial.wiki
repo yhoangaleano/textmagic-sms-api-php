@@ -267,3 +267,42 @@ try {
 }
 
 }}}
+
+
+------
+
+
+==Check phone number validity and destination price==
+
+This command helps you to validate phone number format and check message price to this destination.
+This command also tells about phone number's country.
+{{{
+
+$phones = array(447123456789);
+//$phones = array(447123456789, 447123456790);  - for multiple numbers at once
+try {
+
+    $results = $api->checkNumber($phones);
+
+    foreach($results as $number => $info) {
+        $price = $info['price'];
+        $country = $info['country'];
+    }
+
+} catch (WrongPhoneFormatException $e) {
+    throw new WrongPhoneFormatException();
+} catch (TooManyItemsException $e) {
+    throw new TooManyItemsException();
+} catch (AuthenticationException $e) {
+    throw new AuthenticationException();
+} catch (IPAddressException $e) {
+    throw new IPAddressException();
+} catch (RequestsLimitExceededException $e) {
+    throw new RequestsLimitExceededException();            
+} catch (DisabledAccountException $e) {
+    throw new DisabledAccountException();    
+} catch (Exception $e) {
+    echo "Catched Exception '".__CLASS__ ."' with message '".$e->getMessage()."' in ".$e->getFile().":".$e->getLine();
+}
+
+}}}
