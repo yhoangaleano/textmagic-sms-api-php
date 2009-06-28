@@ -57,6 +57,8 @@ try {
     //your code
 } catch (TooLongMessageException $e) {
     //your code
+} catch (Exception $e) {
+    echo "Catched Exception '".__CLASS__ ."' with message '".$e->getMessage()."' in ".$e->getFile().":".$e->getLine();
 }
 
 
@@ -99,6 +101,8 @@ try {
     //your code
 } catch (TooLongMessageException $e) {
     //your code
+} catch (Exception $e) {
+    echo "Catched Exception '".__CLASS__ ."' with message '".$e->getMessage()."' in ".$e->getFile().":".$e->getLine();
 }
 
 }}}
@@ -127,7 +131,10 @@ try {
     //your code
 } catch (DisabledAccountException $e) {
     //your code
+} catch (Exception $e) {
+    echo "Catched Exception '".__CLASS__ ."' with message '".$e->getMessage()."' in ".$e->getFile().":".$e->getLine();
 }
+
 }}}
 
 
@@ -164,6 +171,8 @@ try {
 
 } catch (WrongParameterValueException $e) {
     //your code
+} catch (TooManyItemsException $e) {
+    //your code
 } catch (UnknownMessageIdException $e) {
     //your code
 } catch (AuthenticationException $e) {
@@ -174,6 +183,8 @@ try {
     //your code
 } catch (DisabledAccountException $e) {
     //your code
+} catch (Exception $e) {
+    echo "Catched Exception '".__CLASS__ ."' with message '".$e->getMessage()."' in ".$e->getFile().":".$e->getLine();
 }
 
 }}}
@@ -215,6 +226,8 @@ try {
     //your code
 } catch (DisabledAccountException $e) {
     //your code
+} catch (Exception $e) {
+    echo "Catched Exception '".__CLASS__ ."' with message '".$e->getMessage()."' in ".$e->getFile().":".$e->getLine();
 }
 
 }}}
@@ -249,5 +262,8 @@ try {
     //your code
 } catch(DisabledAccountException $e) {
     //your code
+} catch (Exception $e) {
+    echo "Catched Exception '".__CLASS__ ."' with message '".$e->getMessage()."' in ".$e->getFile().":".$e->getLine();
 }
+
 }}}
