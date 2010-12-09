@@ -203,14 +203,14 @@ try {
     
     $results = $api->receive($lastRetrievedId);
 
-    $messages = $json['messages'];
+    $messages = $results['messages'];
     foreach($messages as $message_id => $message) {
         $text = $message['text'];
         $from = $message['from'];
         $timestamp = $message['timestamp'];
     }
 
-    $unread = $json['unread']; // if it is greater than zero, rerequst this function with latest message ID retrived in that response
+    $unread = $results['unread']; // if it is greater than zero, rerequst this function with latest message ID retrived in that response
 
 } catch (WrongParameterValueException $e) {
     //your code
